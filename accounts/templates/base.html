@@ -1,0 +1,42 @@
+<html lang="en">
+
+
+
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'accounts/style.css' %}" type="text/css">
+
+
+
+        {% block head %}
+            <title>Base</title>
+        {% endblock %}
+
+
+    </head>
+
+
+    <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href=" " class="brand-logo">Ice Cube</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="/account/register/">Register</a> </li>
+          </ul>
+      </ul>
+    </div>
+  </nav>
+        {% block body %}
+            <h1> Base in yo face </h1>
+        {% endblock %}
+
+
+    </body>
+</html>
