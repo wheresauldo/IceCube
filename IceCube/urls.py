@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from IceCube import views
+from accounts import urls
+from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import LoginView
 
 
 # anything at top of your browser is defined here
@@ -27,6 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 # link app urls to master urls
     path('account/', include('accounts.urls')),
+
+
 
 #   set path_to_there('word_in_address_bar/', funct_to_get_there(display_this),
 

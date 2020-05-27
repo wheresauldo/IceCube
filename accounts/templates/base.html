@@ -23,16 +23,57 @@
 
 
     <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href=" " class="brand-logo">Ice Cube</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <ul class="nav navbar-nav navbar-right">
-              <li><a href="/account/register/">Register</a> </li>
-          </ul>
-      </ul>
-    </div>
-  </nav>
+<br>
+        <div class="container">
+            <nav class="navbar navbar-default"> <nav class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only"> </span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Ice Cube</a>
+              </div>
+            </nav>
+            </nav>
+
+
+
+  <nav class="navbar nav-bar-default">
+    <div class="container-fluid">
+
+                <div id="navbar" class="navber-collapse collapse">
+                    {% if user.is_authenticated %}
+                    <ul class="nav navbar-nav" >
+                        <li> <a href="/account" > Home </a>
+                        </li>
+                    </ul>
+                      <ul class="nav navbar-nav navbar-left">
+
+
+                          <li> <a href="/account/profile"> Profile </a> </li>
+                          <li> <a href="/account/profile/edit"> Edit Profile </a> </li>
+                          <li> <a href="/account/change_password"> Change Password </a> </li>
+                          <li> <a href="/account/password_reset"> Reset Password </a> </li>
+                          <li> <a href="/account/logged_out"> Logout </a> </li>
+
+                      </ul>
+
+                    {% else %}
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/account/register/">Register</a> </li>
+                          <li> <a href="/account/login"> Login </a> </li>
+
+                      </ul>
+                    {% endif %}
+                 </div>
+            </div>
+</nav>
+
+
+
         {% block body %}
             <h1> Base in yo face </h1>
         {% endblock %}
@@ -40,3 +81,4 @@
 
     </body>
 </html>
+
