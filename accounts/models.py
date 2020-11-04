@@ -13,7 +13,8 @@ class UserProfile(models.Model):
     phone = models.IntegerField(default=0)
     objects = models.Manager()
 
-def create_profile(sender, **kwargs):
+"""def create_profile(sender, **kwargs):
     if kwargs['created']:
-        user_profile = UserProfile.objects.create(user=kwargs['instance'])post_save.connect(create_profile, sender=User)
+        user_profile = UserProfile.objects.create(user=kwargs['instance'])post_save.connect(create_profile, sender=User)"""
+
 
